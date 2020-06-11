@@ -22,3 +22,45 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## DB design
+
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|username|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|age|integer|null: false|
+|sex|string|null: false|
+|disease|string|null: false|
+|history|integer|null: false|
+|status|string|null: false|
+|word|text||
+|SNS|text||
+### Association
+- has_many :posts
+- has_many :comments
+
+
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|disease|string|null: false|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- has_many :comments
+
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :post
