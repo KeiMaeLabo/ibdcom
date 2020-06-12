@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IBDのわ</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <%= image_tag 'IBDlogo2.png' %>
+      </div>
+      <div class="explanation">
+        <p class="explain">炎症性腸疾患の患者さんコミュニティ</p>
+      </div>
+      <div class="post-btns">
+        <a class="post" href="#">ログイン</a>
+        <a class="post" href="#">新規登録</a>
+      </div>
+      <div class="number-patients">
+        <p class="patient">登録患者数</p>
+        <p class="number">1人</p>
+      </div>
+    </header>
+    <div class="subheader">
+      <a class="index" href="#">かんじゃカード</a>
+      <a class="index" href="#">ききたいこと</a>
+    </div>
+    <section class="section">
+      <div class="cards-list">
+        <%#<% @users.each do |user| %>
+        <%= render partial: "user" %> <%#, locals: { user: user } %>
+        <%#<% end %>
+        <%= render partial: "user" %> 
+        <%= render partial: "user" %>
+        <%= render partial: "user" %>
+        <%= render partial: "user" %>
+        <%= render partial: "user" %>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="keimaelabo">
+        <%= image_tag 'KeiMaeLabo-logo-2.png', size:'70x40' %>
+      </div>
+      <p class="copyright">Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

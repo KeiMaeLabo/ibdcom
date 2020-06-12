@@ -32,6 +32,7 @@ Things you may want to cover:
 |username|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
+|image|text||
 |age|integer|null: false|
 |sex|string|null: false|
 |disease|string|null: false|
