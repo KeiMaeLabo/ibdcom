@@ -101,30 +101,40 @@
       border-radius: 3px;
       line-height: 170%;
       
+      .image-age-sex {
+        display: flex;
 
-      .age-sex {
-
-        .age {
-
+        .image {
+          border-radius: 50%;
+          margin-left: 5px;
         }
-        .sex {
-          color: #136FFF;
 
+        .age-sex {
+          display: flex;
+          line-height: 50px;
+          
+          .age {
+            margin: 0 15px;
+          }
+          .sex {
+            color: #136FFF;
+            
+          }
         }
       }
+        
+        .name {
+          font-weight: bold;
+          
+        }
+        
+        .disease {
+          
+        }
+        
+        .history {
+        }
 
-      .name {
-        font-weight: bold;
-
-      }
-
-      .disease {
-
-      }
-
-      .history {
-
-      }
 
       .status {
 
