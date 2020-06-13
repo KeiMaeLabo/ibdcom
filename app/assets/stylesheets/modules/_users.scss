@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100px;
+  background-color: #FFC7AF;
+  justify-content: center;
+  display: flex;
+
+  .logo {
+    height: 100px;
+  }
+
+  .explanation {
+    width: 280px;
+    position: relative;
+
+    .explain {
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      bottom: 7px;
+    }
+  }
+
+  .post-btns {
+    padding: 60px 0 0 0;
+    width: 185px;
+    height: 100px;
+    margin: 0 5px;    
+    .post {
+      text-decoration: none;
+      padding: 8px 10px;
+      color: #FF5192;
+      font-weight: bold;
+      border: 2px solid #FF5192;
+      border-radius: 3px;
+      background-color: white;
+      text-align: center;
+    }
+  }
+
+  .number-patients {
+    padding: 10px;
+    text-align: center;
+    color: #FF367F;
+    margin-right: 10px;
+
+    .patient {
+      font-size: 20px;
+    }
+
+    .number {
+      font-size: 30px;
+    }
+  }
+}
+
+.subheader {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  line-height: 35px;
+  
+  .index {
+    width: 300px;
+    background-color: #FFFAFA;
+    border: 2px solid #FF5192;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #FF5192;
+    margin-right: 1px;
+  }
+}
+
+.section {
+  height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+
+  .cards-list {
+    width: 975px;
+    height: calc(100vh - 180px);
+    background-color: #EEEEEE;
+    padding: 2px;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+      padding: 5px;
+      margin: 2px;
+      width: 190px;
+      height: 222px;
+      color: #555555;
+      background-color: #FFFFEE;
+      border: 1px solid #999999;
+      border-radius: 3px;
+      line-height: 170%;
+      
+      .image-age-sex {
+        display: flex;
+
+        .image {
+          border-radius: 50%;
+          margin-left: 5px;
+        }
+
+        .age-sex {
+          display: flex;
+          line-height: 50px;
+          
+          .age {
+            margin: 0 15px;
+          }
+          .sex {
+            color: #136FFF;
+            
+          }
+        }
+      }
+        
+        .name {
+          font-weight: bold;
+          
+        }
+        
+        .disease {
+          
+        }
+        
+        .history {
+        }
+
+
+      .status {
+
+      }
+
+      .sns {
+        overflow: hidden;
+      }
+
+      .word {
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 40px;
+  background-color: #FFF8DC;
+  display: flex;
+  justify-content: center;
+
+  .keimaelabo {
+  }
+
+  .copyright {
+    color: #666666;
+    font-size: 12px;
+    line-height: 40px;
+  }
+}
