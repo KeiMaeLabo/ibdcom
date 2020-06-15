@@ -12,12 +12,11 @@
 
       <div class="field">
         <%= f.label :age, '年齢 *' %><br />
-        <%= f.number_field :age, min: '1' %>
+        <%= f.number_field :age, min: '1', maxlength: "4" %>
       </div>
 
       <div class="field">
         <%= f.label :sex, '性別 *'%><br />
-        <%#<%= f.text_field :sex, autofocus: true  %>
         <%= f.select :sex, [["女性", "女性"], ["男性", "男性"]], include_blank: "選択して下さい" %>
       </div>
 
@@ -31,7 +30,7 @@
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> 文字以上)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password" %>
+        <%= f.password_field :password, autocomplete: "new-password", minlength: "6" %>
       </div>
 
       <div class="field">
@@ -41,7 +40,6 @@
 
       <div class="field">
         <%= f.label :disease, '潰瘍性大腸炎 or クローン病 *' %><br />
-        <%#<%= f.text_field :disease, autofocus: true  %>
         <%= f.select :disease, [["潰瘍性大腸炎", "潰瘍性大腸炎"], ["クローン病", "クローン病"]], include_blank: "選択して下さい" %>
       </div>
 
@@ -52,7 +50,6 @@
 
       <div class="field">
         <%= f.label :status, '現在の状態 *' %><br />
-        <%#<%= f.text_field :status, autofocus: true  %>
         <%= f.select :status, [["発症", "発症"], ["寛解", "寛解"], ["再燃", "再燃"]], include_blank: "選択して下さい" %>
       </div>
 
@@ -63,7 +60,7 @@
 
       <div class="field">
         <%= f.label :word, 'ひとこと（12文字以内）' %><br />
-        <%= f.text_field :word, autofocus: true, size: '30', placeholder: '例）よろしく〜！' %>
+        <%= f.text_field :word, autofocus: true, size: '30', placeholder: '例）よろしく〜！', maxlength: "12" %>
       </div>
 
       <div class="field">
