@@ -6,13 +6,13 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%= f.label :name, 'お名前（ニックネーム 10文字以内）*　　　    *マークは必須です'%><br />
-        <%= f.text_field :name, autofocus: true, size: '20', maxlength: "10" %>
+        <%= f.label :name, 'お名前（ニックネーム 8文字以内）*　　　    *マークは必須です'%><br />
+        <%= f.text_field :name, autofocus: true %>
       </div>
 
       <div class="field">
         <%= f.label :age, '年齢 *' %><br />
-        <%= f.number_field :age, min: '1', maxlength: "3" %>
+        <%= f.number_field :age, min: '1', maxlength: "4" %>
       </div>
 
       <div class="field">
@@ -54,13 +54,13 @@
       </div>
 
       <div class="field">
-        <%= f.label :sns, 'SNSリンク (twitter, instagram, facebook, youtube）' %><br />
+        <%= f.label :sns, 'SNSリンク' %><br />
         <%= f.text_field :sns, autofocus: true, size: '30'  %>
       </div>
 
       <div class="field">
-        <%= f.label :word, 'ひとこと（16文字以内）' %><br />
-        <%= f.text_field :word, autofocus: true, size: '30', placeholder: '例）よろしく〜！', maxlength: "16" %>
+        <%= f.label :word, 'ひとこと（12文字以内）' %><br />
+        <%= f.text_field :word, autofocus: true, size: '30', placeholder: '例）よろしく〜！', maxlength: "12" %>
       </div>
 
       <div class="field">

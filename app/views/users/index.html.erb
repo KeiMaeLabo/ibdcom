@@ -18,7 +18,7 @@
   <% end %>
   <div class="number-patients">
     <p class="patient">登録患者数</p>
-    <p class="number"><%= @num %>人</p>
+    <p class="number">1人</p>
   </div>
 </header>
 <div class="subheader">
@@ -30,6 +30,11 @@
     <% @users.each do |user| %>
       <%= render partial: "user", locals: { user: user } %>
     <% end %>
+    <%= render partial: "user" %> 
+    <%= render partial: "user" %>
+    <%= render partial: "user" %>
+    <%= render partial: "user" %>
+    <%= render partial: "user" %>
   </div>
 </section>
 <footer class="footer">

@@ -6,23 +6,24 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%= f.label :name, 'お名前（ニックネーム 10文字以内）*　　　    *マークは必須です'%><br />
-        <%= f.text_field :name, autofocus: true, size: '20', maxlength: "10" %>
+        <%= f.label :name, 'お名前（ニックネーム 8文字以内）*　　　    *マークは必須です'%><br />
+        <%= f.text_field :name, autofocus: true %>
       </div>
 
       <div class="field">
         <%= f.label :age, '年齢 *' %><br />
-        <%= f.number_field :age, min: '1', maxlength: "3" %>
+        <%= f.number_field :age, min: '1', maxlength: "4" %>
       </div>
 
       <div class="field">
         <%= f.label :sex, '性別 *'%><br />
+        <%#<%= f.text_field :sex, autofocus: true  %>
         <%= f.select :sex, [["女性", "女性"], ["男性", "男性"]], include_blank: "選択して下さい" %>
       </div>
 
       <div class="field">
         <%= f.label :email, 'Eメール *' %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", size: '30' %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -44,7 +45,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :current_password, '現在のパスワード *'%> <i>(内容を更新する場合必須)</i><br />
+        <%= f.label :current_password, '現在のパスワード *'%> <i>(内容を更新するための確認)</i><br />
         <%= f.password_field :current_password, autocomplete: "current-password" %>
       </div>
 
@@ -64,13 +65,13 @@
       </div>
 
       <div class="field">
-        <%= f.label :sns, 'SNSリンク (twitter, instagram, facebook, youtube）' %><br />
+        <%= f.label :sns, 'SNSリンク' %><br />
         <%= f.text_field :sns, autofocus: true, size: '30'  %>
       </div>
 
       <div class="field">
-        <%= f.label :word, 'ひとこと（16文字以内）' %><br />
-        <%= f.text_field :word, autofocus: true, size: '30', placeholder: '例）よろしく〜！', maxlength: "16" %>
+        <%= f.label :word, 'ひとこと（12文字以内）' %><br />
+        <%= f.text_field :word, autofocus: true, size: '30', placeholder: '例）よろしく〜！', maxlength: "12" %>
       </div>
 
       <div class="field">

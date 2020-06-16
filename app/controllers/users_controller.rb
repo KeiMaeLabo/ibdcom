@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @users = User.all.order("RAND()")
-    @num = User.count
+    @users = User.all.order("created_at DESC")
   end
 
   def edit
@@ -25,7 +24,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :age, :sex, :email, :disease, :history, :status, :sns, :word, :image)
+    params.require(:user).permit(:name, :age, :sex, :email, :disease, :history, :status, :sns, :word)
   end
 
 end

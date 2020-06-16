@@ -38,7 +38,6 @@
       border-radius: 3px;
       background-color: white;
       text-align: center;
-      cursor: pointer;
     }
   }
 
@@ -74,7 +73,6 @@
     text-decoration: none;
     color: #FF5192;
     margin-right: 1px;
-    cursor: pointer;
   }
 }
 
@@ -84,7 +82,7 @@
   justify-content: center;
 
   .cards-list {
-    width: 985px;
+    width: 975px;
     height: calc(100vh - 180px);
     background-color: #EEEEEE;
     padding: 2px;
@@ -95,8 +93,8 @@
     .card {
       padding: 5px;
       margin: 2px;
-      width: 192px;
-      height: 225px;
+      width: 190px;
+      height: 222px;
       color: #555555;
       background-color: #FFFFEE;
       border: 1px solid #999999;
@@ -111,12 +109,6 @@
           margin-left: 5px;
         }
 
-        .fas {
-          font-size: 55px;
-          margin-left: 5px;
-          color: #999999;
-        }
-
         .age-sex {
           display: flex;
           line-height: 50px;
@@ -124,35 +116,28 @@
           .age {
             margin: 0 15px;
           }
-          .male {
-            color: #136FFF; 
-          }
-          .female {
-            color: #FF367F;
+          .sex {
+            color: #136FFF;
+            
           }
         }
       }
         
-      .name {
-        font-weight: bold;
-      }
-      
-      .disease {
-      }
-      
-      .history {
-      }
+        .name {
+          font-weight: bold;
+          
+        }
+        
+        .disease {
+          
+        }
+        
+        .history {
+        }
+
 
       .status {
 
-        .far.fa-smile-wink {
-          color: #FFCC00;
-          font-size: x-large;
-        }
-        .far.fa-sad-tear {
-          color: #00ECFF;
-          font-size: x-large;
-        }
       }
 
       .sns {
