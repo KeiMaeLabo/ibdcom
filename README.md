@@ -34,6 +34,7 @@ Things you may want to cover:
 |password|string|null: false|
 |image|text||
 |age|integer|null: false|
+|privacy|integer||
 |sex|string|null: false|
 |disease|string|null: false|
 |history|integer|null: false|

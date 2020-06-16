@@ -20,6 +20,7 @@
       color: #FF5192;
       font-weight: bold;
 
+      
       #user_sex, #user_disease, #user_status {
         height: 30px;
       }
@@ -34,7 +35,19 @@
       }
       
     }
+    .field-age {
+      margin-bottom: 20px;
+      color: #FF5192;
+      font-weight: bold;
+      display: flex;
 
+      .field-age1 {
+        margin-right: 30px;
+      }
+      .field-age2 {
+      }
+    }
+    
     .actions {
       text-align: center;
 
