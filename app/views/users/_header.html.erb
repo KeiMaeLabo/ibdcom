@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="logo">
+    <%= image_tag 'IBDlogo2.png', alt:"IBDのわ" %>
+  </div>
+  <div class="explanation">       
+    <p class="explain">炎症性腸疾患の患者さんコミュニティ</p>
+  </div>
+  <% if user_signed_in? %>
+    <div class="post-btns">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'post' %>
+      <%= link_to "マイカード", edit_user_registration_path, method: :get, class: 'post' %>
+    </div>
+  <% else %>
+    <div class="post-btns">
+      <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+      <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+    </div>
+  <% end %>
+  <div class="number-patients">
+    <p class="patient">登録患者数</p>
+    <p class="number"><%= @num %>人</p>
+  </div>
+</header>
+<div class="subheader">
+  <a class="index" href="#">かんじゃカード</a>
+  <a class="index" href="#">ききたいこと</a>
+</div>
