@@ -1,6 +1,20 @@
-<%= render partial: "header" %>
+<%= render partial: "layouts/header" %>
 <section class="section">
-  <div class="cards-list">
+  <div class="posts-list">
+    <div class="posts-header">
+      症状や治療について不安に思うことをきいてみよう<i class="far fa-smile-wink"></i> 質問をクリックしてコメントしよう！
+    </div>
+    <div class="posts-field">
+      <% @posts.each do |post| %>
+        <%= render partial: "post", locals: { post: post } %>
+      <% end %>
+    </div>
+    <div class="posts-footer">
+      <%= form_with model: Post.new, local: true do |f| %>
+        <%= f.text_area :text, class: 'post-input', placeholder: "ききたいことを入力してください" %>
+        <%= f.submit "アップロード", class: 'post-btn' %>
+      <% end %>
+    </div>
   </div>
 </section>
-<%= render partial: "footer" %>
+<%= render partial: "layouts/footer" %>

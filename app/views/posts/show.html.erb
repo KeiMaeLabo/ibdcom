@@ -1,0 +1,16 @@
+<%= render partial: "layouts/header" %>
+<section class="section">
+  <div class="posts-list">
+    <div class="main-post">
+    </div>
+    <div class="comments-field">
+    </div>
+    <div class="posts-footer">
+      <%= form_with model: Post.new, local: true do |f| %>
+        <%= f.text_area :text, class: 'post-input', placeholder: "コメントを入力してください" %>
+        <%= f.submit "アップロード", class: 'post-btn' %>
+      <% end %>
+    </div>
+  </div>
+</section>
+<%= render partial: "layouts/footer" %>
