@@ -49,6 +49,7 @@
     margin-right: 10px;
 
     .patient {
+      font-family: 'M PLUS Rounded 1c', sans-serif;
       font-size: 20px;
     }
 
@@ -72,6 +73,7 @@
     border: 2px solid #FF5192;
     border-radius: 3px;
     text-decoration: none;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     color: #FF5192;
     margin-right: 1px;
     cursor: pointer;
@@ -82,10 +84,10 @@
   height: calc(100vh - 180px);
   display: flex;
   justify-content: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 
   .cards-list {
     width: 985px;
-    height: calc(100vh - 180px);
     background-color: #EEEEEE;
     padding: 2px;
     overflow: scroll;

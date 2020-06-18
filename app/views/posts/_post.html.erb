@@ -1,0 +1,22 @@
+<div class="post">
+  <div class="post-top">
+    <div class="post-user">
+      <%= post.created_at.strftime("%Y年%m月%d日 %H:%M")%>  <%= post.user.name %> <%= post.user.disease %> 病歴:<%= post.user.history %>年
+    </div>
+    <div class="comment-num">
+      <i class="fas fa-comment-alt"></i> 0
+    </div>
+  </div>
+  <div class="post-content">
+    <i class="fas fa-comment"></i> <%= post.text %>
+  </div>
+  <div class="post-bottom">
+    <div class="new-comment">
+      最新コメント:
+    </div>
+    <div class="comment-user">
+      2020/06/17  ケイマエ  クローン病  病歴:3年
+    </div>
+  </div>
+  <%= link_to " ", "/posts/#{post.id}", class: 'post-link' %>
+</div>

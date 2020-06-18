@@ -49,7 +49,6 @@ Things you may want to cover:
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|disease|string|null: false|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
