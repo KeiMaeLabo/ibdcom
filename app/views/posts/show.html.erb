@@ -1,14 +1,52 @@
 <%= render partial: "layouts/header" %>
 <section class="section">
-  <div class="posts-list">
-    <div class="main-post">
+  <div class="comments-list">
+    <div class="above-field">
+      <div class="main-post">
+        <div class="main-post-top">
+          <div class="main-post-user">
+            <%= @post.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
+            <%= @post.user.name %> <%= @post.user.disease %> 病歴:<%= @post.user.history %>年
+          </div>
+          <% if @post.user.image.present? %>
+            <%= image_tag @post.user.image_url, size: '50x50', class: "post-image" %>
+          <% else %>
+            <i class="fas fa-user-circle"></i>
+          <% end %>
+          <div class="comment-num">
+            <%= link_to '編集', edit_post_path(post.id), method: :get %>
+            <i class="fas fa-comment-alt"></i> <%= @comment_num %>
+          </div>
+        </div>
+        <div class="main-post-content">
+          <i class="fas fa-comment"></i> <%= @post.text %> 
+        </div>
+      </div>
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <div class="comment">
+              <div class="comment-top">
+                <div class="comment-user">
+                  <%= comment.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
+                  <%= comment.user.name %> <%= comment.user.disease %> 病歴:<%= comment.user.history %>年
+                </div>
+                <% if comment.user.image.present? %>
+                  <%= image_tag comment.user.image_url, size: '50x50', class: "comment-image" %>
+                <% else %>
+                  <i class="fas fa-user-circle"></i>
+                <% end %>
+              </div>
+              <div class="comment-content">
+                <i class="fas fa-comment"></i>  <%= comment.text %>
+              </div>
+            </div>             
+          <% end %>
+        <% end %>
     </div>
-    <div class="comments-field">
-    </div>
-    <div class="posts-footer">
-      <%= form_with model: Post.new, local: true do |f| %>
-        <%= f.text_area :text, class: 'post-input', placeholder: "コメントを入力してください" %>
-        <%= f.submit "アップロード", class: 'post-btn' %>
+    <div class="comments-footer">
+      <%= form_with model: [@post, @comment], local: true do |f| %>
+        <%= f.text_area :text, class: 'comment-input', placeholder: "コメントを入力してください" %>
+        <%= f.submit "アップロード", class: 'comment-btn' %>
       <% end %>
     </div>
   </div>

@@ -1,99 +1,100 @@
 .section {
   /* _user.scssに元コードあり  */ 
 
-  .posts-list {
+  .comments-list {
     /* _post.scssに元コードあり  */ 
     width: 985px;
     background-color: #EEEEEE;
     padding: 2px;
+    position: relative;
 
-    .posts-header {
-      background-color: #FFB6C1;
-      color: #555555;
-      text-align: center;
-      height: 25px;
-    }
-
-    .posts-field {
-      height: calc(100vh - 300px);
+    .above-field {
+      height: calc(100vh - 277px);
       overflow: scroll;
-      display: flex;
-      flex-wrap: wrap;
-
-      .post {
-        width: 486px;
-        height: 150px;
+      
+      .main-post {
+        width: 976px;
+        height: auto;
         color: #555555;
         background-color: #FFFFEE;
         border-radius: 20px;
         border: 1px solid #999999;
-        padding: 6px;
+        padding: 10px 10px 20px 10px;
         margin: 2px;
-        cursor: pointer;
-        position: relative;
-
-        .post-top {
+        font-size: large;
+        
+        .main-post-top {
           display: flex;
-          justify-content: space-between;
-          .post-user {
-            font-size: small;
+          position: relative;
+          
+          .main-post-user {
 
+            
           }
+          
+          .post-image {
+            border-radius: 50%;
+            margin: 0 10px;
+          }
+
           .comment-num {
-
+            position: absolute;
+            right: 15px;
           }
+          
         }
-
-        .post-content {
-          height: 75px;
+        
+        .main-post-content {
         }
-
-        .post-bottom {
-
-          .new-comment {
-            font-size: small;
-          }
+      }
+      
+      .comment {
+        width: 800px;
+        height: auto;
+        color: #555555;
+        background-color: #FFFFEE;
+        border-radius: 20px;
+        border: 1px solid #999999;
+        padding: 10px;
+        margin: 2px;
+        
+        .comment-top {
+          display: flex;
 
           .comment-user {
-            font-size: small;
-            text-align: right;
+          }
+
+          .comment-image {
+            border-radius: 50%;
+            margin: 0 10px;
           }
         }
-
-       .post-link {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
+          
+        .comment-content {
         }
       }
-
-      .post:hover {
-        filter:alpha(opacity=70);/* IE 6,7*/
-        -ms-filter: "alpha(opacity=70)";/* IE 8,9 */
-        -moz-opacity:0.7;/* FF , Netscape */
-        -khtml-opacity: 0.7;/* Safari 1.x */
-        opacity:0.7;
-        zoom:1;/*IE*/
-      }
     }
-
-    .posts-footer {
+    .comments-footer {
+      /* _post.scssに元コードあり  */ 
       height: 95px;
       background-color: #FFC7AF;
       padding: 5px 140px;
+      position: absolute;
+      bottom: 0;
       position: relative;
 
-      .post-input {
+      .comment-input {
         height: 85px;
         width: 600px;
         border: 2px solid #FF5192;
         resize: none;
         margin-right: 10px;
+        border-radius: 10px;
+
+        /* _post.scssに元コードあり  */ 
       }
 
-      .post-btn {
+      .comment-btn {
         padding: 5px 5px;
         background-color: white;
         color: #FF5192;
@@ -103,9 +104,9 @@
         cursor: pointer;
         position: absolute;
         bottom: 13px;
+
+        /* _post.scssに元コードあり  */ 
       }
     }
   }
 }
-
-
