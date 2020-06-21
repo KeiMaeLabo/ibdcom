@@ -26,7 +26,14 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @num = User.count
     @post = Post.find(params[:id])
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+    redirect_to "/posts/#{post.id}", notice: '質問を更新しました'
   end
 
   private
