@@ -1,11 +1,7 @@
 class PostsController < ApplicationController
-  def index
-    @num = User.count
-    @posts = Post.includes(:user).order("updated_at DESC")
-  end
 
-  def new
-    @post = Post.new
+  def index
+    @posts = Post.includes(:user).order("updated_at DESC")
   end
 
   def create
@@ -18,7 +14,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @num = User.count
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
@@ -26,7 +21,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @num = User.count
     @post = Post.find(params[:id])
   end
 
