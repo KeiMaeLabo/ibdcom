@@ -1,0 +1,25 @@
+<%= render partial: "layouts/header" %>
+<section class="edit-section">
+  <div class="comments-list">
+      <div class="main-post">
+        <div class="main-post-top">
+          <div class="main-post-user">
+            <%= @post.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
+            <%= @post.user.name %> <%= @post.user.disease %> 病歴:<%= @post.user.history %>年
+          </div>
+          <% if @post.user.image.present? %>
+            <%= image_tag @post.user.image_url, size: '50x50', class: "post-image" %>
+          <% else %>
+            <i class="fas fa-user-circle"></i>
+          <% end %>
+        </div>
+        <div class="edit-content">
+          <%= form_with(model: @post, local: true) do |f| %>
+            <%= f.text_area :text, class: 'edit-input', placeholder: "text" , rows: "10" %>
+            <%= f.submit "更新", class: 'edit-btn' %>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</section>
+<%= render partial: "layouts/footer" %>

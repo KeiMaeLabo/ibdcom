@@ -1,0 +1,69 @@
+<%= render partial: "layouts/header" %>
+<section class="section">
+  <div class="cards-list">
+    <div class="card">
+      <div class="image-age-sex">
+        <% if @user.image.present? %>
+          <%= image_tag @user.image_url, size: '55x55', class: "image" %>
+        <% else %>
+          <i class="fas fa-user-circle"></i>
+        <% end %>
+        <div class="age-sex">
+          <% if @user.privacy == 1 %>
+            <div class="age">
+              ひみつ
+            </div>
+          <% else %>
+            <div class="age">
+              <%= @user.age %>歳
+            </div>
+          <% end %>
+          <% if @user.sex == "男性" %>
+          <div class="male">
+            <%= @user.sex %>
+          </div>
+          <% else %>
+          <div class="female">
+            <%= @user.sex %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="name">    
+        <%= @user.name %>
+      </div>
+      <span class="disease">
+        <%= @user.disease %>
+      </span>
+      <span class="history">
+        病歴: <%= @user.history %>年
+      </span>
+      <div class="status">
+        現在: <%= @user.status %>
+        <% if @user.status == "寛解" %>
+          <i class="far fa-smile-wink"></i>
+        <% else %>
+          <i class="far fa-sad-tear"></i>
+        <% end %>
+      </div>
+      <div class="sns">
+        <% if @user.sns.present? %>
+          <a href="<%= @user.sns %>" target="_blank" rel="noopener">SNSを見る</a>
+        <% else %>
+        <% end %>
+        <% if @user.sns.include?("twitter") %>
+          <i class="fab fa-twitter"></i>
+        <% elsif @user.sns.include?("facebook") %>
+          <i class="fab fa-facebook"></i>
+        <% elsif @user.sns.include?("instagram") %>
+          <i class="fab fa-instagram"></i>
+        <% else%>
+        <% end %>
+      </div>
+      <div class="word">
+        ひとこと: <%= @user.word %>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render partial: "layouts/footer" %>

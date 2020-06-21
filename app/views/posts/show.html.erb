@@ -6,7 +6,8 @@
         <div class="main-post-top">
           <div class="main-post-user">
             <%= @post.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
-            <%= @post.user.name %> <%= @post.user.disease %> 病歴:<%= @post.user.history %>年
+            <%= link_to @post.user.name, user_path(@post.user.id), method: :get %> 
+            <%= @post.user.disease %> 病歴:<%= @post.user.history %>年
           </div>
           <% if @post.user.image.present? %>
             <%= image_tag @post.user.image_url, size: '50x50', class: "post-image" %>
@@ -14,7 +15,9 @@
             <i class="fas fa-user-circle"></i>
           <% end %>
           <div class="comment-num">
-            <%= link_to '編集', edit_post_path(post.id), method: :get %>
+            <% if user_signed_in? && current_user.id == @post.user_id %>
+            <%= link_to '編集', edit_post_path(@post.id), method: :get %>
+            <% end %>
             <i class="fas fa-comment-alt"></i> <%= @comment_num %>
           </div>
         </div>
@@ -28,7 +31,8 @@
               <div class="comment-top">
                 <div class="comment-user">
                   <%= comment.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
-                  <%= comment.user.name %> <%= comment.user.disease %> 病歴:<%= comment.user.history %>年
+                  <%= link_to comment.user.name, user_path(comment.user.id), method: :get %>
+                  <%= comment.user.disease %> 病歴:<%= comment.user.history %>年
                 </div>
                 <% if comment.user.image.present? %>
                   <%= image_tag comment.user.image_url, size: '50x50', class: "comment-image" %>
