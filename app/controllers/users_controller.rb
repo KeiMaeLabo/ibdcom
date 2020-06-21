@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all.order("RAND()")
-    @num = User.count
   end
 
   def edit
@@ -22,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index unless user_signed_in?
+    redirect_to action: :index, notice: 'ログインするとご利用いただけます' unless user_signed_in?
   end
 
   private
