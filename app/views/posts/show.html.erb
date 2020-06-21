@@ -14,24 +14,37 @@
             <i class="fas fa-user-circle"></i>
           <% end %>
           <div class="comment-num">
-            <i class="fas fa-comment-alt"></i> 0
+            <%= link_to '編集', edit_post_path(post.id), method: :get %>
+            <i class="fas fa-comment-alt"></i> <%= @comment_num %>
           </div>
         </div>
         <div class="main-post-content">
           <i class="fas fa-comment"></i> <%= @post.text %> 
         </div>
       </div>
-      <div class="comment">
-        <div class="comment-user">
-          2020/06/18
-        </div>
-        <div class="comment-content">
-          <i class="fas fa-comment"></i> ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-        </div>
-      </div>
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <div class="comment">
+              <div class="comment-top">
+                <div class="comment-user">
+                  <%= comment.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
+                  <%= comment.user.name %> <%= comment.user.disease %> 病歴:<%= comment.user.history %>年
+                </div>
+                <% if comment.user.image.present? %>
+                  <%= image_tag comment.user.image_url, size: '50x50', class: "comment-image" %>
+                <% else %>
+                  <i class="fas fa-user-circle"></i>
+                <% end %>
+              </div>
+              <div class="comment-content">
+                <i class="fas fa-comment"></i>  <%= comment.text %>
+              </div>
+            </div>             
+          <% end %>
+        <% end %>
     </div>
     <div class="comments-footer">
-      <%= form_with model: Post.new, local: true do |f| %>
+      <%= form_with model: [@post, @comment], local: true do |f| %>
         <%= f.text_area :text, class: 'comment-input', placeholder: "コメントを入力してください" %>
         <%= f.submit "アップロード", class: 'comment-btn' %>
       <% end %>

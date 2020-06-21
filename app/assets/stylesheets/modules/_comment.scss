@@ -21,6 +21,7 @@
         border: 1px solid #999999;
         padding: 10px 10px 20px 10px;
         margin: 2px;
+        font-size: large;
         
         .main-post-top {
           display: flex;
@@ -33,11 +34,10 @@
           
           .post-image {
             border-radius: 50%;
-            margin: 0 5px;
+            margin: 0 10px;
           }
 
           .comment-num {
-            font-size: large;
             position: absolute;
             right: 15px;
           }
@@ -45,7 +45,6 @@
         }
         
         .main-post-content {
-          font-size: large;
         }
       }
       
@@ -58,16 +57,21 @@
         border: 1px solid #999999;
         padding: 10px;
         margin: 2px;
+        
+        .comment-top {
+          display: flex;
 
-        .comment-user {
+          .comment-user {
+          }
 
+          .comment-image {
+            border-radius: 50%;
+            margin: 0 10px;
+          }
         }
-
+          
         .comment-content {
-
         }
-
-
       }
     }
     .comments-footer {
