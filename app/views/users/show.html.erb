@@ -9,15 +9,15 @@
           <i class="fas fa-user-circle"></i>
         <% end %>
         <div class="age-sex">
-          <% if @user.privacy == 1 %>
-            <div class="age">
-              ひみつ
-            </div>
-          <% else %>
+          <%# <% if @user.privacy == 1 %> 
+            <%# <div class="age"> %>
+              <%# ひみつ %>
+            <%# </div> %>
+          <%# <% else %> 
             <div class="age">
               <%= @user.age %>歳
             </div>
-          <% end %>
+          <%# <% end %> 
           <% if @user.sex == "男性" %>
           <div class="male">
             <%= @user.sex %>
