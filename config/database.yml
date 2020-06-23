@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: ibdcom_production
-  username: ibdcom
-  password: <%= ENV['IBDCOM_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
