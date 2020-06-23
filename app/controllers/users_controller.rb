@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @users = User.all.order("RANDOM()")
+    if Rails.env.production?
+      @users = User.all.order("RANDOM()")
+    elsif Rails.env.development?
+      @users = User.all.order("RAND()")
+    end
   end
 
   def edit
