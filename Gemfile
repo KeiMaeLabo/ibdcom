@@ -62,6 +62,8 @@ gem 'devise'
 
 gem 'carrierwave'
 
+gem 'fog-aws'
+
 group :production do
   gem 'pg'
 end
