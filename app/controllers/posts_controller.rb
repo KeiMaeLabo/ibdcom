@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to "/posts#index", notice: '質問をアップロードしました'
+      redirect_to "/posts#index", notice: '質問をアップロードしました。'
     else
       redirect_to "/posts#index"
     end
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
-    redirect_to "/posts/#{post.id}", notice: '質問を更新しました'
+    redirect_to "/posts/#{post.id}", notice: '質問を更新しました。'
   end
 
   private

@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.create(comment_params)
     if @comment.save
-      redirect_to "/posts/#{@comment.post.id}", notice: 'コメントしました'
+      redirect_to "/posts/#{@comment.post.id}", notice: 'コメントしました。'
     else
       redirect_to "/posts/#{@comment.post.id}"
     end
