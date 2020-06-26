@@ -1,30 +1,31 @@
-# README
+みんなでつなぐ IBDの「わ」  
+all together IBD's circle  
+====
+概要 Overview  
+IBD（炎症性腸疾患）患者さんのためのWEBコミュニティ  
+WEB community for patients of IBD  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 特徴 Description
+**1. 患者さんの見える化（Visualize patients）**  
+  患者さんの簡易プロフィールを一覧表示。安心感や共感を。  
 
-Things you may want to cover:
+**2. コミュニケーション（Communication）**   
+  気軽にコミュニケーションできるようように質問とコメント機能あり。  
 
-* Ruby version
+**3. SNSのハブ（Hub for SNS）**    
+  プロフィールにSNSリンクを設置し気になった方のSNSに繋ぐ。  
 
-* System dependencies
+## デモ画面 Demo
+[![Image from Gyazo](https://i.gyazo.com/65525ac71af9257034bd15dab527e136.gif)](https://gyazo.com/65525ac71af9257034bd15dab527e136)
 
-* Configuration
+## 利用条件 Requirement
+潰瘍性大腸炎またはクローン病と診断されている方、そのご家族  
 
-* Database creation
+## ライセンス Licence
+Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.  
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 ## DB design
-
 
 ## usersテーブル
 |Column|Type|Options|
@@ -45,7 +46,6 @@ Things you may want to cover:
 - has_many :posts
 - has_many :comments
 
-
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -54,7 +54,6 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - has_many :comments
-
 
 ## commentsテーブル
 |Column|Type|Options|
