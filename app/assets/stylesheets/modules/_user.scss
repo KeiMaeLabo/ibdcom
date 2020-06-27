@@ -12,34 +12,31 @@
     height: 100px;
   }
 
-  .explanation {
+  .explain-post {
     width: 275px;
-    position: relative;
+    margin: 0 10px;
+    text-align: center;
 
     .explain {
+      height: 40px;
       color: white;
       font-weight: bold;
-      position: absolute;
-      bottom: 7px;
+      margin-top: 10px;
     }
-  }
-
-  .post-btns {
-    padding: 60px 0 0 0;
-    height: 100px;
-    margin: 0 5px;   
-
+    
+      
     .post {
       text-decoration: none;
       padding: 8px 10px;
+      margin: 0 5px;
       color: #FF5192;
       font-weight: bold;
       border: 2px solid #FF5192;
       border-radius: 3px;
       background-color: white;
-      text-align: center;
       cursor: pointer;
     }
+    
   }
 
   .number-patients {
