@@ -1,7 +1,7 @@
 みんなでつなぐ IBDの「わ」  
 all together IBD's circle  
 ====
-概要 Overview  
+## 概要 Overview  
 IBD（炎症性腸疾患）患者さんのためのWEBコミュニティ  
 WEB community for patients of IBD  
 
