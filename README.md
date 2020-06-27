@@ -8,13 +8,15 @@ WEB community for patients of IBD
 ## 特徴 Description
 **1. 患者さんの見える化（Visualize patients）**  
   患者さんの簡易プロフィールを一覧表示。安心感や共感を。  
+
 **2. コミュニケーション（Communication）**   
   気軽にコミュニケーションできるようように質問とコメント機能あり。  
+
 **3. SNSのハブ（Hub for SNS）**    
   プロフィールにSNSリンクを設置し気になった方のSNSに繋ぐ。  
 
 ## デモ画面 Demo
-![demo](https://i.gyazo.com/65525ac71af9257034bd15dab527e136.mp4/raw)  
+[![Image from Gyazo](https://i.gyazo.com/65525ac71af9257034bd15dab527e136.gif)](https://gyazo.com/65525ac71af9257034bd15dab527e136)
 
 ## 利用条件 Requirement
 潰瘍性大腸炎またはクローン病と診断されている方、そのご家族  
