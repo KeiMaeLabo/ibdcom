@@ -1,26 +1,26 @@
-みんなでつなぐ IBDの「わ」
-all together IBD's circle
+みんなでつなぐ IBDの「わ」  
+all together IBD's circle  
 ====
-概要 Overview
-IBD（炎症性腸疾患）患者さんのためのWEBコミュニティ
-WEB community for patients of IBD
+概要 Overview  
+IBD（炎症性腸疾患）患者さんのためのWEBコミュニティ  
+WEB community for patients of IBD  
 
 ## 特徴 Description
-・患者さんの見える化（Visualize patients）
-患者さんの簡易プロフィールを一覧表示。安心感や共感を。
-・コミュニケーション（Communication）
-気軽にコミュニケーションできるようように質問とコメント機能あり。
-・SNSのハブ（Hub for SNS）
-プロフィールにSNSリンクを設置し気になった方のSNSに繋ぐ。
+・患者さんの見える化（Visualize patients）  
+患者さんの簡易プロフィールを一覧表示。安心感や共感を。  
+・コミュニケーション（Communication）  
+気軽にコミュニケーションできるようように質問とコメント機能あり。  
+・SNSのハブ（Hub for SNS）  
+プロフィールにSNSリンクを設置し気になった方のSNSに繋ぐ。  
 
 ## デモ画面 Demo
-https://i.gyazo.com/65525ac71af9257034bd15dab527e136.mp4
+![demo](https://i.gyazo.com/65525ac71af9257034bd15dab527e136.mp4)  
 
 ## 利用条件 Requirement
-潰瘍性大腸炎またはクローン病と診断されている方、そのご家族
+潰瘍性大腸炎またはクローン病と診断されている方、そのご家族  
 
 ## ライセンス Licence
-Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.
+Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.  
 
 
 ## DB design
