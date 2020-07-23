@@ -28,7 +28,7 @@ WEB community for patients of IBD
   メールアドレス: test@com  
   パスワード: 123456  
   
-  ログインすることでコメント画面に遷移可能になります。
+  ログインすることでコメント画面に遷移可能になります。（ログインせずともホーム画面と質問画面は確認できます。）
   
 ## :family: 利用条件 Requirement  
   
@@ -39,8 +39,22 @@ WEB community for patients of IBD
 ## :closed_lock_with_key: ライセンス Licence  
   
 Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.  
-  
 
+## :hammer: 使用技術  
+
+### フロントエンド
+・HTML/CSS  
+・Haml/Scss  
+
+### バックエンド
+・Ruby 2.6.5  
+・Ruby on Rails 6.0.3.2  
+  
+### インフラ
+・AWS（EC2/S3）  
+・MySQL 5.6  
+・nginx 1.16.1  
+  
 ## :computer: DB設計
   
 ### usersテーブル
