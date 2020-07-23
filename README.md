@@ -23,14 +23,17 @@ WEB community for patients of IBD
 ## :tv: デモ画面 Demo
 [![Image from Gyazo](https://i.gyazo.com/65525ac71af9257034bd15dab527e136.gif)](https://gyazo.com/65525ac71af9257034bd15dab527e136)
   
+  
 ## :family: 利用条件 Requirement  
   
 潰瘍性大腸炎またはクローン病と診断されている方、そのご家族  
 （現状はどなたでもご利用ください。）  
   
+  
 ## :closed_lock_with_key: ライセンス Licence  
   
 Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.  
+  
   
 ## :computer: DB設計
   
@@ -49,7 +52,7 @@ Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.
 |status|string|null: false|
 |word|text||
 |SNS|text||
-### Association
+#### Association
 - has_many :posts
 - has_many :comments
 
@@ -58,7 +61,7 @@ Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-### Association
+#### Association
 - belongs_to :user
 - has_many :comments
 
@@ -68,6 +71,6 @@ Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |post_id|integer|null: false, foreign_key: true|
-### Association
+#### Association
 - belongs_to :user
 - belongs_to :post
