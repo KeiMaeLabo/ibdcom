@@ -28,7 +28,7 @@ WEB community for patients of IBD
   メールアドレス: test@com  
   パスワード: 123456  
   
-  ログインすることでコメント画面に遷移できます。
+  ログインすることでコメント画面に遷移可能になります。
   
 ## :family: 利用条件 Requirement  
   
