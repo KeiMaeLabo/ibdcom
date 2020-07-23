@@ -44,7 +44,7 @@ Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.
 
 ### フロントエンド
 ・HTML/CSS  
-・Haml/Scss  
+・Scss  
 
 ### バックエンド
 ・Ruby 2.6.5  
