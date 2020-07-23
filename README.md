@@ -38,7 +38,7 @@ WEB community for patients of IBD
 
 ## :closed_lock_with_key: ライセンス Licence  
   
-Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.  
+Copyright © 2020 KeiMaeLabo All Rights Reserved.  
 
 ## :hammer: 使用技術  
 
