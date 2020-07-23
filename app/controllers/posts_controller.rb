@@ -30,6 +30,14 @@ class PostsController < ApplicationController
     redirect_to "/posts/#{post.id}", notice: '質問を更新しました。'
   end
 
+  def search
+    if params[:text].present?
+      @posts = Post.where('text LIKE ?', "%#{params[:text]}%")
+    else
+      @posts = Post.none
+    end
+  end
+
   private
   def post_params
     params.require(:post).permit(:text).merge(user_id: current_user.id)

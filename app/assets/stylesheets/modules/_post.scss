@@ -10,11 +10,39 @@
       background-color: #FFB6C1;
       color: #555555;
       text-align: center;
-      height: 25px;
+      height: 30px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &__sentence {
+
+      }
+
+      &__search {
+
+        #text {
+          width: 60%;
+          border-radius: 15px;
+          border: 2px solid #3399FF;
+          padding: 0 10px;
+        }
+        #search-btn {
+          display: none;
+        }
+        .fas {
+          color: white;
+          background-color: #C0C0C0;
+          padding: 3px 5px;
+          border-radius: 5px;
+          box-shadow: 1px 1px 1px #808080;
+          cursor: pointer;
+        }
+      }
     }
 
     .posts-field {
-      height: calc(100vh - 300px);
+      height: calc(100vh - 307px);
       overflow: scroll;
       display: flex;
       flex-wrap: wrap;
@@ -25,9 +53,9 @@
         color: #555555;
         background-color: #FFFFEE;
         border-radius: 20px;
-        border: 1px solid #999999;
         padding: 6px;
         margin: 2px;
+        box-shadow: 1px 1px 3px 1px #999999;
         cursor: pointer;
         position: relative;
 

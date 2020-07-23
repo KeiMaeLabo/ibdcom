@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :edit, :update, :show]
   resources :posts, only: [:index, :new, :create, :show, :edit, :update] do
     resources :comments, only: :create
+    get :search, on: :collection
   end
 
 end
