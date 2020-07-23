@@ -1,5 +1,4 @@
 # みんなでつなぐ IBDの「わ」  
-
 ## :eyes: 概要 Overview  
 IBD（炎症性腸疾患）患者さんのためのWEBコミュニティ  
 WEB community for patients of IBD  
@@ -35,10 +34,25 @@ WEB community for patients of IBD
 潰瘍性大腸炎またはクローン病と診断されている方、そのご家族  
 （現状はどなたでもご利用ください。）  
   
-
 ## :closed_lock_with_key: ライセンス Licence  
   
-Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.  
+Copyright © 2020 KeiMaeLabo All Rights Reserved.  
+
+## :hammer: 使用技術  
+
+### フロントエンド
+・HTML/CSS  
+・Scss  
+
+### バックエンド
+・Ruby 2.6.5  
+・Ruby on Rails 6.0.3.2  
+  
+### インフラ
+・AWS（EC2/S3）  
+・MySQL 5.6  
+・nginx 1.16.1  
+  
 
 ## :hammer: 使用技術  
 
