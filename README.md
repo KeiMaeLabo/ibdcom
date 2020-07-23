@@ -1,6 +1,6 @@
 # みんなでつなぐ IBDの「わ」  
 ====  
-## 概要 Overview  
+## :eyes: 概要 Overview  
 IBD（炎症性腸疾患）患者さんのためのWEBコミュニティ  
 WEB community for patients of IBD  
   
@@ -20,19 +20,19 @@ WEB community for patients of IBD
   プロフィールにSNSリンクを設置し気になった方のSNSに繋ぐ。  
   
   
-## デモ画面 Demo
+## :tv: デモ画面 Demo
 [![Image from Gyazo](https://i.gyazo.com/65525ac71af9257034bd15dab527e136.gif)](https://gyazo.com/65525ac71af9257034bd15dab527e136)
   
-## 利用条件 Requirement  
+## :family: 利用条件 Requirement  
   
 潰瘍性大腸炎またはクローン病と診断されている方、そのご家族  
 （現状はどなたでもご利用ください。）  
   
-## ライセンス Licence  
+## :closed_lock_with_key: ライセンス Licence  
   
 Copyright © 2020-2020 KeiMaeLabo All Rights Reserved.  
   
-## DB設計
+## :computer: DB設計
   
 ### usersテーブル
 |Column|Type|Options|
