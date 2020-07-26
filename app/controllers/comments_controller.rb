@@ -2,10 +2,9 @@ class CommentsController < ApplicationController
   
   def create
     @comment = Comment.create(comment_params)
-    if @comment.save
-      redirect_to "/posts/#{@comment.post.id}", notice: 'コメントしました。'
-    else
-      redirect_to "/posts/#{@comment.post.id}"
+    respond_to do |format|
+      format.html { redirect_to "/posts/#{@comment.post.id}", notice: 'コメントしました。' }
+      format.json
     end
   end
 
