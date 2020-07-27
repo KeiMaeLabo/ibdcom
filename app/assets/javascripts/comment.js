@@ -8,8 +8,7 @@ $(function(){
             <a href="/users/${comment.user_id}">${comment.user_name}</a>
             ${comment.user_disease} 病歴: ${comment.user_history} 年
           </div>
-          <img alt="Flower" src="${comment.user_image_url}" class="comment-image" size="50x50 />
-          <i class="fas fa-user-circle"></i>
+          <img alt="" src="${comment.user_image_url}" class="comment-image" width="50", height="50" />
         </div>
         <div class="comment-content">
           <i class="fas fa-comment"></i>  ${comment.text}
@@ -21,6 +20,7 @@ $(function(){
     e.preventDefault();
     let formData = new FormData(this);
     let url = $(this).attr('action')
+    console.log(url)
     $.ajax({
       url: url,
       type: "POST",
@@ -32,6 +32,7 @@ $(function(){
     .done(function(data){
       let html = buildHTML(data);
       $('.above-field').append(html);
+      $('.above-field').animate({ scrollTop: $('.above-field')[0].scrollHeight});
       $('.comment-input').val('');
       $('.comment-btn').prop('disabled', false);
     })

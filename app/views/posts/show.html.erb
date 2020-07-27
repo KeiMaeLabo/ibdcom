@@ -34,11 +34,7 @@
                 <%= link_to comment.user.name, user_path(comment.user.id), method: :get %>
                 <%= comment.user.disease %> 病歴:<%= comment.user.history %>年
               </div>
-              <% if comment.user.image.present? %>
-                <%= image_tag comment.user.image_url, size: '50x50', class: "comment-image" %>
-              <% else %>
-                <i class="fas fa-user-circle"></i>
-              <% end %>
+              <%= image_tag comment.user.image_url, size: '50x50', class: "comment-image" %>
             </div>
             <div class="comment-content">
               <i class="fas fa-comment"></i>  <%= comment.text %>

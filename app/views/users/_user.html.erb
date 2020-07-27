@@ -1,10 +1,6 @@
 <div class="card">
   <div class="image-age-sex">
-    <% if user.image.present? %>
-      <%= image_tag user.image_url, size: '55x55', class: "image" %>
-    <% else %>
-      <i class="fas fa-user-circle"></i>
-    <% end %>
+    <%= image_tag user.image_url, size: '55x55', alt: "&#xf2bd;", class: "image" %>
     <div class="age-sex">
       <% if user.privacy == 1 %> 
         <div class="age">
