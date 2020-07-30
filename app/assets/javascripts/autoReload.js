@@ -31,6 +31,7 @@ $(function(){
     })
     .done(function(comments) {
       // 更新するメッセージがなかった場合は.doneの後の処理が動かないようにする
+      console.log(comments.length)
       if (comments.length !== 0) {
         //追加するHTMLの入れ物を作る
         let insertHTML = '';
