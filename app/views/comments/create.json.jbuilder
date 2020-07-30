@@ -6,3 +6,4 @@ json.user_name @comment.user.name
 json.user_disease @comment.user.disease
 json.user_history @comment.user.history
 json.user_image_url @comment.user.image_url
+json.id @comment.id

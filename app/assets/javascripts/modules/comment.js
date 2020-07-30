@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(comment){
     let html = 
-      `<div class="comment">
+      `<div class="comment" data-comment-id=${comment.id}>
         <div class="comment-top">
           <div class="comment-user">
             ${comment.created_at}
@@ -39,5 +39,5 @@ $(function(){
     .fail(function(){
       alert('error');
     })
-  })
-})
+  });
+});
