@@ -64,6 +64,8 @@ gem 'carrierwave'
 
 gem 'fog-aws'
 
+gem 'jquery-rails'
+
 group :production do
   gem 'pg'
 end

@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :new, :create, :show, :edit, :update] do
     resources :comments, only: :create
     get :search, on: :collection
+    namespace :api do
+      resources :comments, only: :index, defaults: { format: 'json' }
+    end
   end
 
 end

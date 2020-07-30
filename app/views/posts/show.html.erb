@@ -1,8 +1,9 @@
+<%= javascript_include_tag 'autoReload' %>
 <%= render partial: "layouts/header" %>
 <section class="section">
   <div class="comments-list">
     <div class="above-field">
-      <div class="main-post">
+      <div class="main-post" data-post-id="<%= @post.id %>">
         <div class="main-post-top">
           <div class="main-post-user">
             <%= @post.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
@@ -25,30 +26,26 @@
           <i class="fas fa-comment"></i> <%= @post.text %> 
         </div>
       </div>
-        <% if @comments %>
-          <% @comments.each do |comment| %>
-            <div class="comment">
-              <div class="comment-top">
-                <div class="comment-user">
-                  <%= comment.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
-                  <%= link_to comment.user.name, user_path(comment.user.id), method: :get %>
-                  <%= comment.user.disease %> 病歴:<%= comment.user.history %>年
-                </div>
-                <% if comment.user.image.present? %>
-                  <%= image_tag comment.user.image_url, size: '50x50', class: "comment-image" %>
-                <% else %>
-                  <i class="fas fa-user-circle"></i>
-                <% end %>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <div class="comment" data-comment-id="<%= comment.id %>">
+            <div class="comment-top">
+              <div class="comment-user">
+                <%= comment.created_at.strftime("%Y年%m月%d日 %H:%M")%> 
+                <%= link_to comment.user.name, user_path(comment.user.id), method: :get %>
+                <%= comment.user.disease %> 病歴:<%= comment.user.history %>年
               </div>
-              <div class="comment-content">
-                <i class="fas fa-comment"></i>  <%= comment.text %>
-              </div>
-            </div>             
-          <% end %>
+              <%= image_tag comment.user.image_url, size: '50x50', class: "comment-image" %>
+            </div>
+            <div class="comment-content">
+              <i class="fas fa-comment"></i>  <%= comment.text %>
+            </div>
+          </div>             
         <% end %>
+      <% end %>
     </div>
     <div class="comments-footer">
-      <%= form_with model: [@post, @comment], local: true do |f| %>
+      <%= form_with model: [@post, @comment], local: true, id: "new_comment" do |f| %>
         <%= f.text_area :text, class: 'comment-input', placeholder: "コメントを入力してください" %>
         <%= f.submit "アップロード", class: 'comment-btn' %>
       <% end %>
