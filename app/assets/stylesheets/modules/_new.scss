@@ -26,7 +26,6 @@
       color: #FF5192;
       font-weight: bold;
 
-      
       #user_sex, #user_disease, #user_status {
         height: 30px;
       }
@@ -35,11 +34,14 @@
         display: none;
       }
       .fas {
-        font-size: 20px;
-        margin: 10px;
+        font-size: 25px;
+        margin: 40px 20px 40px 40px;
         cursor: pointer;
       }
-      
+
+      .preview-image {
+        border-radius: 50%;
+      }
     }
     .field-age {
       margin-bottom: 20px;

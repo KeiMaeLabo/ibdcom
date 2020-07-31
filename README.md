@@ -6,7 +6,7 @@ WEB community for patients of IBD
 ## 🌐 本番環境 URL
 
 ### **https://ibdcom.herokuapp.com/**  
-　
+  
 ## :white_check_mark: 特徴 Description  
 
 ### **1. 患者さんの見える化（Visualize patients）**  
@@ -32,7 +32,6 @@ WEB community for patients of IBD
 ## :family: 利用条件 Requirement  
   
 潰瘍性大腸炎またはクローン病と診断されている方、そのご家族  
-（現状はどなたでもご利用ください。）  
   
 ## :closed_lock_with_key: ライセンス Licence  
   
@@ -40,21 +39,22 @@ Copyright © 2020 KeiMaeLabo All Rights Reserved.
 
 ## :hammer: 使用技術  
 
-### フロントエンド
+### フロントエンド  
 ・HTML/CSS  
 ・Scss  
-.javascript  
+・javascript  
+・jQuery
 
-### バックエンド
+### バックエンド  
 ・Ruby 2.6.5  
 ・Ruby on Rails 6.0.3.1  
   
-### インフラ
+### インフラ  
 ・Heroku  
 ・AWS（S3）  
-・PostgreSQL  
-  
-  
+・PostgreSQL（本番環境）  
+・MySQL（開発環境）  
+   
 ## :computer: DB設計
   
 ### usersテーブル
