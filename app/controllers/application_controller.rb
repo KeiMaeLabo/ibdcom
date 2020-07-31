@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def users_number #ヘッダーの登録患者数
+  # ヘッダーの登録患者数
+  def users_number
     @num = User.count
   end
 

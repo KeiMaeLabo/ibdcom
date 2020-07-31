@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-
+  before_action :set_post, only: [:show, :edit, :update]
+  
   def index
     @posts = Post.includes(:user).order("updated_at DESC")
   end
@@ -14,20 +15,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
     @comment_num = @post.comments.count
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    post = Post.find(params[:id])
-    post.update(post_params)
-    redirect_to "/posts/#{post.id}", notice: '質問を更新しました。'
+    @post.update(post_params)
+    redirect_to "/posts/#{@post.id}", notice: '質問を更新しました。'
   end
 
   def search
@@ -39,6 +37,11 @@ class PostsController < ApplicationController
   end
 
   private
+  
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
   def post_params
     params.require(:post).permit(:text).merge(user_id: current_user.id)
   end
