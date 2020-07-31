@@ -43,31 +43,17 @@ Copyright © 2020 KeiMaeLabo All Rights Reserved.
 ### フロントエンド
 ・HTML/CSS  
 ・Scss  
+.javascript  
 
 ### バックエンド
 ・Ruby 2.6.5  
-・Ruby on Rails 6.0.3.2  
+・Ruby on Rails 6.0.3.1  
   
 ### インフラ
-・AWS（EC2/S3）  
-・MySQL 5.6  
-・nginx 1.16.1  
+・Heroku  
+・AWS（S3）  
+・PostgreSQL  
   
-
-## :hammer: 使用技術  
-
-### フロントエンド
-・HTML/CSS  
-・Scss  
-
-### バックエンド
-・Ruby 2.6.5  
-・Ruby on Rails 6.0.3.2  
-  
-### インフラ
-・AWS（EC2/S3）  
-・MySQL 5.6  
-・nginx 1.16.1  
   
 ## :computer: DB設計
   

@@ -6,9 +6,15 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :name, presence: true, uniqueness: true, length: { maximum: 10}
+  validates :name, presence: true, uniqueness: { case_sensitive: true }, length: { maximum: 10}
+  validates :email, presence: true, uniqueness: { case_sensitive: true }
+  validates :age, presence: true
+  validates :sex, presence: true
+  validates :disease, presence: true
+  validates :history, presence: true
+  validates :status, presence: true
   validates :word, length: { maximum: 16}
-  # validates :sns, inclusion: { in: %w(twitter instagram facebook youtube) }
+  validates :sns, format: { with: /https.+/ }, allow_blank: true
   devise :validatable, password_length: 6..50
 
   # def update_without_current_password(params, *options)
