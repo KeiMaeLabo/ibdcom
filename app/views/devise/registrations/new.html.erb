@@ -6,14 +6,18 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%= f.label :name, 'お名前（ニックネーム 10文字以内）*　　　    *マークは必須です'%><br />
+        <%= f.label :name, 'お名前（ニックネーム 10文字以内）*　　　    *マークは必須です'%>
         <%= f.text_field :name, autofocus: true, size: '20', maxlength: "10" %>
       </div>
 
       <div class="field-age">
         <div class="field-age1">
-          <%= f.label :age, '年齢 *' %><br />
-          <%= f.number_field :age, min: '1', maxlength: "3" %>
+          <div>
+            <%= f.label :age, '年齢 *' %>
+          </div>
+          <div>
+            <%= f.number_field :age, min: '1', maxlength: "3" %>
+          </div>
         </div>
         <div class="field-age2">
           <%= f.label :privacy, ' 年齢非公開' %>  
@@ -22,59 +26,99 @@
       </div>
 
       <div class="field">
-        <%= f.label :sex, '性別 *'%><br />
-        <%= f.select :sex, [["女性", "女性"], ["男性", "男性"]], include_blank: "選択して下さい" %>
+        <div>
+          <%= f.label :sex, '性別 *'%>
+        </div>
+        <div>
+          <%= f.select :sex, [["女性", "女性"], ["男性", "男性"]], include_blank: "選択して下さい" %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :email, 'Eメール *' %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", size: '30' %>
+        <div>
+          <%= f.label :email, 'Eメール *' %>
+        </div>
+        <div>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", size: '30' %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :password, 'パスワード *' %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> 文字以上)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password", minlength: "6" %>
+        <div>
+          <%= f.label :password, 'パスワード *' %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> 文字以上)</em>
+          <% end %>
+        </div>
+        <div>
+          <%= f.password_field :password, autocomplete: "new-password", minlength: "6" %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation, 'パスワードの確認 *' %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <div>
+          <%= f.label :password_confirmation, 'パスワードの確認 *' %>
+        </div>
+        <div>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :disease, '潰瘍性大腸炎 or クローン病 *' %><br />
-        <%= f.select :disease, [["潰瘍性大腸炎", "潰瘍性大腸炎"], ["クローン病", "クローン病"]], include_blank: "選択して下さい" %>
+        <div>
+          <%= f.label :disease, '潰瘍性大腸炎 or クローン病 *' %>
+        </div>
+        <div>
+          <%= f.select :disease, [["潰瘍性大腸炎", "潰瘍性大腸炎"], ["クローン病", "クローン病"]], include_blank: "選択して下さい" %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :history, '病歴（年）*' %><br />
-        <%= f.number_field :history, min:'0' %>
+        <div>
+          <%= f.label :history, '病歴（年）*' %>
+        </div>
+        <div>
+          <%= f.number_field :history, min:'0' %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :status, '現在の状態 *' %><br />
-        <%= f.select :status, [["発症", "発症"], ["寛解", "寛解"], ["再燃", "再燃"]], include_blank: "選択して下さい" %>
+        <div>
+          <%= f.label :status, '現在の状態 *' %>
+        </div>
+        <div>
+          <%= f.select :status, [["発症", "発症"], ["寛解", "寛解"], ["再燃", "再燃"]], include_blank: "選択して下さい" %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :sns, 'SNSリンク (twitter, instagram, facebook, youtube）' %><br />
-        <%= f.text_field :sns, autofocus: true, size: '30'  %>
+        <div>
+          <%= f.label :sns, 'SNSリンク (twitter, instagram, facebook, youtube）' %>
+        </div>
+        <div>
+          <%= f.text_field :sns, autofocus: true, size: '30'  %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :word, 'ひとこと（16文字以内）' %><br />
-        <%= f.text_field :word, autofocus: true, size: '30', placeholder: '例）よろしく〜！', maxlength: "16" %>
+        <div>
+          <%= f.label :word, 'ひとこと（16文字以内）' %>
+        </div>
+        <div>
+          <%= f.text_field :word, autofocus: true, size: '30', placeholder: '例）よろしく〜！', maxlength: "16" %>
+        </div>
       </div>
 
       <div class="field">
-        <%= f.label :image, 'プロフィール写真 (png, jpg) ' %><br />
-        <%= f.file_field :image, autofocus: true  %>
-        <label for="user_image" >
-        　<i class="fas fa-camera"></i><input type="file" size="16" id="user_image">
-        </label>
+        <div>
+          <%= f.label :image, 'プロフィール写真 (png, jpg) ' %>
+        </div>
+        <div class="preview">
+          <%= f.file_field :image, autofocus: true  %>
+          <label for="user_image" >
+          　<i class="fas fa-camera"></i><input type="file" size="16" id="user_image">
+          </label>
+        </div>
       </div>
 
       <div class="actions">
